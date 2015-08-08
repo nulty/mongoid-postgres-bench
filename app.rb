@@ -2,8 +2,6 @@ require 'mongoid'
 require_relative "documents/event"
 require_relative "documents/url"
 require_relative "documents/publisher"
-require_relative "documents/clicks_by_day_stats"
-require_relative "documents/clicks_by_referrer_stats"
 
 Mongoid.load!('./mongoid.yml', :development) #, database: :click_stats
 

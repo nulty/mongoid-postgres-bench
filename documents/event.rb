@@ -3,7 +3,7 @@ class Event
 
   embeds_many :urls
   embeds_many :publishers
-  embeds_many :clicks_by_referrers, class_name: 'ClicksByReferrerStats' #, type: Hash, default: {clicks: 0, referrer: nil}
-  embeds_many :clicks_by_days, class_name: 'ClicksByDayStats'
+  field :clicks_by_referrer, type: Set, default:Set.new
+  field :clicks_by_day, type: Set, default: Set.new
   field :id, type: Integer
 end
